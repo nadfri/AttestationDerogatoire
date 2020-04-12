@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    background-color: powderblue;
+}
+header{
+display: flex;
+justify-content: space-around;
+height: 10vh;
+}
+
+header button{
+    width: 50%;
+    height: 100%;
+}
+
+fieldset{
+	text-transform: capitalize;
+}
+
+#output{
+    display: none;
+}
+
+#output span{
+    color: blue;
+    text-transform: capitalize;
+}

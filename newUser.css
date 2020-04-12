@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	background-color: powderblue;
+}
+#container{
+	display: flex;
+	flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+}
+
+
+input[type=text]{
+	text-transform: capitalize;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form{
+	margin: auto;
+	width: 90%;
+}
+
+#output a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 5vw;
+}
+
+
+#output a:hover {
+	background: #ccd5f0;
+}
+
+input,button{
+	margin: auto;
+	width: 100%;
+}

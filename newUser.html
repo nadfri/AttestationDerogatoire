@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+    <title>Nouvel Utilisateur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="newUser.css">
+    <script src="newUser.js"></script>
+</head>
+<body>
+<div id="container">
+<h1>Nouvel Utilisateur</h1>
+<form id="form">
+    <input id="prenom"     type="text" placeholder="Prénom" required><br>
+    <input id="nom"        type="text" placeholder="Nom" required><br>
+    <input id="birthday"   type="text" placeholder="Date de naissance" onfocus="(this.type='date')" autocomplete="off" required><br>
+    <input id="placeBirth" type="text" placeholder="Lieu de naissance" required><br>
+    <input id="adresse"    type="text" placeholder="Adresse" required><br>
+    <input id="code"       type="number" min=1 max=99999 placeholder="Code Postal" autocomplete="off" required><br>
+    <input id="city" placeholder="Ville" autocomplete="off" required><br>
+    <input id="ajouter" type="submit" value="Ajouter">
+</form>
+
+<div id="output"></div>
+
+</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="codePostal.js"></script>
+</body>
+</html>
