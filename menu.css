@@ -1,27 +1,187 @@
 body{
     margin: 0;
-    background-color: powderblue;
-}
-header{
-display: flex;
-justify-content: space-around;
-height: 10vh;
+    background-color: aliceblue;
 }
 
-header button{
-    width: 50%;
-    height: 100%;
+header{
+    
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    margin:0;
+}
+
+#divMenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+#divMenu button{
+    width: 49.5%;
+    border-radius: 2px;
+    height: 7vh;
+    border: none;
+    color: white;
+    background-color: teal;   
+}
+
+#divInfo{
+    
+    display: none;
+    color: red;
+    text-align: center;
+    height: 3.2vh;
+    line-height: 3.2vh;
+    transition: all;
+    margin: auto;
+
+
+    font-style: italic;
+
+}
+
+section{
+    padding-top: 11vh;
+}
+
+
+
+button,span,label,input[type=checkbox],input[type=submit]{
+    cursor: pointer;
+}
+
+input{
+    vertical-align: middle;
+}
+
+input[type=checkbox] {
+    height: 15px;
+    width: 15px;
+}
+
+
+#bt_newUser,#bt_newAttest {
+    height: 5vh;
+    width: 100%;
+    text-align:center;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    border: none;
+}
+
+#usersList{
+    min-height: 10vh;
+    font-size: x-large;
+    overflow-x: hidden;
+}
+
+.bin{
+    float: right;
+    cursor: pointer;
+    width: 27px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#dateSortie,#heureSortie{
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: teal;
+    color: white;
 }
 
 fieldset{
-	text-transform: capitalize;
+    text-transform: capitalize;
+    padding: 1vw;
+    border-radius: 5px;
 }
 
-#output{
+
+#div_Attestation{
+    min-height: 10vh;
+    overflow: auto;
+}
+
+.list_Attest{
+    padding-left: 1vw;
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+i{
+    font-size: smaller;
+}
+  
+.list_Attest:hover{
+    border-radius: 5px;
+    background-color: teal;
+
+}
+
+
+.option{
+    float: right;
+    cursor: pointer;
+    width: 50px;
+	height: auto;
+}
+
+
+
+#fieldNew_Attest{
     display: none;
 }
 
+
+/*****************Attestation Ecrite********************************/
+
+#output{
+    background-color: white;
+    overflow:auto ;
+}
+
+
 #output span{
     color: blue;
+    font-weight: bold;
     text-transform: capitalize;
 }
+
+p{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.7rem;
+}
+
+
+
+h1{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight : normal;
+}
+
+.case img{
+    width: 1.5rem;
+    margin-right: 0.4rem;
+}
+
+.case{
+    margin-left: 0.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.annotation{
+    font-size: 0.5rem;
+}
+/***************/
+

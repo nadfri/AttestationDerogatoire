@@ -7,8 +7,6 @@ console.log(tabUsers);
 
 
 
-
-
 tabUsers.forEach(element => {
     const p = document.createElement("p");
     p.textContent = `${element.prenom} ${element.nom} né(e) le ${element.birthday}

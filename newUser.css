@@ -30,6 +30,11 @@ input::-webkit-outer-spin-button {
 form{
 	margin: auto;
 	width: 90%;
+	display: block;
+}
+
+input{
+	height: 7vh;
 }
 
 #output a {

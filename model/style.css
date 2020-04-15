@@ -1,39 +1,33 @@
 p{
-    font-family: "Arial", serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 0.8rem;
 }
 
 
 .case img{
     width: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 0.4rem;
 }
 
-.annotation{
-    text-align: left;
-    margin-left: 0.08in;
-    margin-right: 0.11in;
-    line-height: 85%;
-    font-size: 0.7rem;
-}
 
 .case{
-    margin-left: 0.2in;
-    margin-right: 0.07in; 
-    margin-top: 0.17in; 
-    margin-bottom: 0.25in;
-    line-height: 105%;
+    margin-left: 0.2rem;
+    margin-bottom: 0.25rem;
 }
 
 h1{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 h2{
     text-align: center;
     font-size: 0.7rem;
     font-weight : normal;
+}
+
+.annotation{
+    font-size: 0.6rem;
 }
 
 

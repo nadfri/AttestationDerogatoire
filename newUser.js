@@ -16,13 +16,12 @@ form.onsubmit= (e) =>
             adresse: adresse.value,
             codePostal: code.value,
             ville: city.value,
-            id: id,
-            heure: null,
-            motif: null
+            id: id
             });
 
     localStorage.setItem("usersList", JSON.stringify(tabUsers));
     console.log(tabUsers);
+    document.location = "menu.html";
 
     e.preventDefault();
 }
