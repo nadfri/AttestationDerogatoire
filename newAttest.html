@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+    <title>Nouvelle Attestation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="newAttest.css">
+    <script src="newAttest.js"></script>
+</head>
+<body>
+
+<h1>Nouvelle Attestation</h1>
+
+<fieldset>
+    <legend>Utilisateurs</legend>
+
+</fieldset>
+
+
+<form id="form">
+    <fieldset>
+        <legend>Formulaire</legend>
+
+        <label for="dateSortie">Date de Sortie:</label><input id="dateSortie"  type="date" autocomplete="off" required>
+        <br>
+        <label for="heureSortie">Heure de Sortie:</label><input id="heureSortie" type="time" autocomplete="off" required>
+        <br>
+        <label for="motif">Motif:</label>
+        <br>
+        <select id="motif" required>
+            <option value="">Choisir un motif</option>
+            <option value="courses">Courses</option>
+            <option value="sport">Sport (1h/1km)</option>
+            <option value="travail">Activité Professionnelle</option>
+            <option value="santé">Consultations et Soins</option>
+            <option value="famille">Assistance Famille</option>
+            <option value="judiciaire">Convocation Judiciaire</option>
+            <option value="missions">Mission d'interet Générale</option>
+        </select>
+
+    </fieldset>
+
+    <div id="divAjouter">
+        <input id="bt_newAttest" type="image" src="img/attestIcon.png">
+        <input id="bt_newUser1" type="image" src="img/userIcon.png" alt="nouvel utilisateur">
+    
+    </div>
+    
+</form>
+
+
+
+    
+
+
+
+</body>
+</html>

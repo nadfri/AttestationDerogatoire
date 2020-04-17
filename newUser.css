@@ -22,6 +22,7 @@ fieldset{
 
 legend{
 	color: royalblue;
+	font-weight: bold;
 }
 
 form{
@@ -52,9 +53,6 @@ input::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
-
-
 .output a {
     display: block;
     text-decoration: none;
@@ -75,7 +73,6 @@ input::-webkit-outer-spin-button {
 	border: ridge 5px teal;
 	margin: auto;
 	background-color: lightslategray;
-	
 }
 
 #divAjouter:hover{
