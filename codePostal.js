@@ -1,55 +1,72 @@
-//=6
-jQuery(function($){var _5=$('#code'),_4=$('#city'),_9=$('#output');
-var _2={};
-
-var _12=(~(location.protocol+'').indexOf('s')?'https':'http')+'://vicopo.selfbuild.fr';
-
-_5.keyup(function()
-{var _0=$(this).val();
-
-    if(/^[^0-9]/.test(_0))
-    {_5.val('');
-
-_4.val(_0).focus().trigger('keyup')
-}
+jQuery(function ($) {
+    $('.vicopo-wrapper').each(function () {
+        var _wrapper = this;
+        var _code = $('.code', _wrapper), _city = $('.city', _wrapper), _out = $('.output', _wrapper);
+	var _cache = {};
+  // Utilisation du HTTPS ou non selon le protocole de la page actuelle
+	var _host = ~(location.protocol + '').indexOf('s')
+		? 'https://www.selfbuild.fr/vicopo'
+		: 'http://vicopo.selfbuild.fr';
+  // Si le code postal ne commence pas par un chiffre, c'est une ville, on passe dans le champ ville avec la valeur courante
+	_code.keyup(function () {
+		var _val = $(this).val();
+		if(/^[^0-9]/.test(_val)) {
+			_code.val('');
+			_city.val(_val).focus().trigger('keyup');
+		}
+	});
+  // Si la ville commence par un chiffre, c'est un code postal, on passe dans le champ code postal avec la valeur courante
+	_city.keyup(function () {
+		var _val = $(this).val();
+		if(/^[0-9]/.test(_val)) {
+			_city.val('');
+			_code.val(_val).focus().trigger('keyup');
+		}
+	});
+  // Fonction à exécuter à la réception d'une réponse pour afficher les liens dans #output
+	function _done(_cities) {
+		_out.html(_cities.map(function (_data) {
+			return '<a href="#">' + _data.code + ' &nbsp; ' + _data.city + '</a>';
+		}).join(''));
+	}
+  // Appel de Vicopo lors de l'appui sur une touche dans #code ou #city
+  $.each(['code', 'city'], function (i, _name) {
+    var _input = $('.' + _name, _wrapper).on('keyup', function () {
+			var _val = _input.val();
+			if(_val.length > 1) {
+				_cache[_name] = _cache[_name] || {};
+				if(_cache[_name][_val]) {
+					_done(_cache[_name][_val]);
+				}
+				var _data = {};
+				_data[_name] = _val;
+				$.getJSON(_host, _data, function (_answear) {
+					_cache[_name][_answear.input] = _answear.cities;
+					if(_input.val() == _answear.input) {
+						_done(_answear.cities);
+					}
+				});
+			}
+		});
+	});
+  // Au clic sur un lien, on remplace la valeur des champs code postal et ville
+  $(_wrapper).on('click', '.output a', function (e) {
+		var _contents = $(this).text();
+		var _space = _contents.indexOf(' ');
+    // Le premier espace sépare le code postal de la ville dans le texte du lien
+    // Si vous souhaitez personnaliser le texte des liens, nous vous conseillons d'utiliser :
+    // <a href="#" data-code="' + _data.code + '" data-city="' + _data.city + '">
+    // dans le lien, puis :
+    // _code.val($(this).data('code'));
+    // _city.val($(this).data('city'));
+		if(~_space) {
+			_code.val(_contents.substr(0, _space));
+			_city.val(_contents.substr(_space).trim());
+			_out.empty();
+		}
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	});
 });
-
-_4.keyup(function()
-{var _0=$(this).val();
-
-    if(/^[0-9]/.test(_0))
-    {
-        _4.val('');
-    _5.val(_0).focus().trigger('keyup')
-    }
 });
-
-function _10(_13)
-{_9.html(_13.map(function(_3)
-    {return'<a href="#">'+_3.code+' &nbsp; '+_3.city+'</a>'
-}).join(''))}$.each(['code','city'],function(i,_1)
-{var _11=$('#'+_1).on('keyup',function()
-    {var _0=_11.val();
-
-        if(_0.length>1)
-        {_2[_1]=_2[_1]||{};
-
-        if(_2[_1][_0])
-        {_10(_2[_1][_0])}
-
-        var _3={};
-        _3[_1]=_0;$.getJSON(_12,_3,function(_6)
-        {
-            _2[_1][_6.input]=_6.cities;
-            if(_11.val()==_6.input)
-            {
-                _10(_6.cities)
-            }
-        })
-        }
-    })
-});
-$(document).on('click','#output a',function(e){var _8=$(this).text();var _7=_8.indexOf(' ');
-            if(~_7){_5.val(_8.substr(0,_7));
-                _4.val(_8.substr(_7).trim());_9.empty()}e.preventDefault();e.stopPropagation();
-            return false})});

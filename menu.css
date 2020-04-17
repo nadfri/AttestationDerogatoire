@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: aliceblue;
+    background: #a0d8ef;
 }
 
 header{
@@ -19,7 +19,7 @@ header{
 
 #divMenu button{
     width: 49.5%;
-    border-radius: 2px;
+    border-radius: 8px;
     height: 7vh;
     border: none;
     color: white;
@@ -67,8 +67,17 @@ input[type=checkbox] {
     text-align:center;
     color: white;
     background-color: teal;
-    border-radius: 5px;
-    border: none;
+
+}
+
+#divNewUser2{
+    display: none;
+    text-align: center;
+}
+
+#divNewUser2 input{
+    width: 50px;
+    height: 50px;
 }
 
 #usersList{
@@ -95,8 +104,10 @@ input[type=checkbox] {
 
 fieldset{
     text-transform: capitalize;
-    padding: 1vw;
     border-radius: 5px;
+    border: 1px solid teal;
+    display: block;
+    padding-top: 0;
 }
 
 
@@ -118,7 +129,7 @@ i{
   
 .list_Attest:hover{
     border-radius: 5px;
-    background-color: teal;
+    background-color: wheat;
 
 }
 

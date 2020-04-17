@@ -1,21 +1,46 @@
 body{
-	margin: 0;
-	background-color: powderblue;
+	margin: 0;	
+	background: #a0d8ef;
 }
-#container{
-	display: flex;
-	flex-direction: column;
-}
+
 
 h1{
-    text-align: center;
-    margin: auto;
+	border-radius: 10px;
+	text-align: center;
+	margin: auto;
+	font-style: italic;
+	color: teal;
+	font-size: 1.5rem;
 }
 
+fieldset{
+	border-radius: 5px;
+	border: 1px solid teal;
+	display: block;
+	padding-top: 0;
+}
 
-input[type=text]{
+legend{
+	color: royalblue;
+}
+
+form{
 	text-transform: capitalize;
+	line-height: 150%;
 }
+
+input{
+	-webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+     -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+		  box-sizing: border-box;
+		  width: 100%;
+
+	border-radius: 5px;
+	border:none;
+	height: 1.3rem;
+	padding-left: 0.5rem;
+}
+
 
 input[type=number] {
     -moz-appearance: textfield;
@@ -27,29 +52,43 @@ input::-webkit-outer-spin-button {
     margin: 0;
 }
 
-form{
-	margin: auto;
-	width: 90%;
-	display: block;
-}
 
-input{
-	height: 7vh;
-}
 
-#output a {
+
+.output a {
     display: block;
     text-decoration: none;
-    color: black;
-    padding-left: 5vw;
+	color: royalblue;
+	text-align: left;
 }
 
 
-#output a:hover {
-	background: #ccd5f0;
+.output a:hover {
+	background: wheat;
 }
 
-input,button{
+#divAjouter{
+	text-align: center;
+	height: 30vw;
+	width: 30vw;
+	border-radius: 50%;
+	border: ridge 5px teal;
 	margin: auto;
-	width: 100%;
+	background-color: lightslategray;
+	
 }
+
+#divAjouter:hover{
+	background: yellowgreen;
+}
+
+
+#ajouter{
+	width: 20vw;
+	height: auto;
+	padding-top: 3vw;
+	padding-left: 1vw;
+}
+
+
+
