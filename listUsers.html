@@ -2,22 +2,34 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-    <title>Nouvel Utilisateur</title>
+    <title>Liste Utilisateurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="newUser.css">
-    <script src="newUser.js"></script>
+    <link rel="stylesheet" type="text/css" href="listUsers.css">
+    <script src="listUsers.js"></script>
 </head>
 <body>
 
-<h1>Nouvel Utilisateur</h1>
 
-<form id="form">
+<fieldset id="field_User">
+    <legend>Liste des utilisateurs</legend>
+
+    <div id="div_NoUser">
+        <p>Créér un nouvel Utilisateur</p>
+        <div id="divNewUser">
+            <input id="bt_newUser2" type="image" src="img/newUser.png" onclick="document.location='newUser.html'">
+        </div>
+    </div>
+
+</fieldset>
+
+
+<form id="edit_form">
     <fieldset class="etatCivil">
         <legend>Etat Civil</legend>
         <input id="prenom"     type="text" placeholder="Prénom" required><br>
         <input id="nom"        type="text" placeholder="Nom" required><br>
-        <input id="birthday"   type="text" placeholder="Date de naissance" autocomplete="off" required>
+        <input id="birthday"   type="date" placeholder="Date de naissance" autocomplete="off" required>
     </fieldset>
     
     <fieldset class="vicopo-wrapper">
@@ -37,14 +49,16 @@
             <div class="output"></div>
     </fieldset>
 
-    <div id="divAjouter"><input id="ajouter" type="image" src="img/newUser.png"></div>
+    <div id="divEdit"><input id="bt_edit" type="image" src="img/editUser.png"></div>
 </form>
 
+
 <div id="divIcon">
-    <input type="image" src="img/contact.png" onclick="document.location='listUsers.html'">
+    <input type="image" src="img/list.png"       onclick="document.location='index.html'">
     <input id="bt_newAttest" type="image" src="img/attestIcon.png" onclick="document.location='newAttest.html'">
-    <input type="image" src="img/list.png" onclick="document.location='index.html'">
+    <input type="image" src="img/userIcon.png"   onclick="document.location='newUser.html'">
 </div>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="codePostal.js"></script>

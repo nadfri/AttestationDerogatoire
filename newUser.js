@@ -6,6 +6,21 @@ JSON.parse(localStorage.getItem('usersList')): [];
 console.log(tabUsers);
 let scroll = true;
 
+
+
+//**********/Désactivation du bouton new Attestation si No Userr***/
+if(tabUsers.length == 0) 
+{
+    bt_newAttest.disabled = true; //desactive le bouton new Attestation
+    bt_newAttest.src = "img/attestIcon2.png";  
+}
+else 
+{
+    bt_newAttest.disabled = false; //active le bouton
+    bt_newAttest.src = "img/attestIcon.png";
+}
+
+
 codePostal.oninput = () => {
     if(codePostal.value.length == 1 && scroll == true) 
         window.scroll(0,200);
@@ -27,6 +42,7 @@ form.onsubmit= (e) =>
             nom: nom.value,
             birthday: birthday.value.replace(/(\d{4})-(\d{2})-(\d{2})/,"$3/$2/$1"),
             placeBirth: placeBirth.value,
+            cpNaiss : cpNaiss.value,
             adresse: adresse.value,
             codePostal: codePostal.value,
             ville: city.value,
@@ -36,7 +52,7 @@ form.onsubmit= (e) =>
 
     localStorage.setItem("usersList", JSON.stringify(tabUsers));
     console.log(tabUsers);
-    document.location = "menu.html";
+    document.location = "listUsers.html";
 
     e.preventDefault();
 }

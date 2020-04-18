@@ -13,9 +13,12 @@ body{
 fieldset{
 	border-radius: 5px;
 	border: 1px solid teal;
-	display: block;
     text-transform: capitalize;
-    min-height: 96vh;
+    min-height: 50vh;
+    max-height: 87vh;
+    overflow-y: auto;
+    padding-right: 1vw;
+    padding-left: 1vw;
 }
 
 legend{
@@ -23,61 +26,51 @@ legend{
     font-weight: bold;
 }
 
-
-
-#field_User{
-    display: none;
-}
-
-
-/***********Section Icon Switch***************************/
-#bt_switch{
-    width: 2.5rem;
-    height: 2.5rem;
-
-    position: fixed;
-    top: 2vh;
-    right: 1vw;
-}
-
-/***********Section Icon User/Attestation**********************/
-
+/***********Barre de Menu**********************/
 #divIcon{
     position: fixed;
-    bottom: 2vh;
-    right: 1vw;
+    bottom: 0vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.1);
 }
 
 #divIcon input{
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 /***********Section Div No User********************/
-.div_NoUser{
+#div_NoUser{
     text-align: center;
     color: royalblue;
 }
 
-.divAjouter{
+
+#divNewUser{
 	text-align: center;
-	height: 30vw;
-	width: 30vw;
+	height: 25vw;
+	width: 25vw;
 	border-radius: 50%;
 	border: ridge 5px teal;
 	margin: auto;
+	margin-top: 1vh;
 	background-color: lightslategray;
 }
 
-.divAjouter:hover{
+#divNewUser:hover{
 	background: yellowgreen;
 }
 
-.bt_newUser2{
+
+#bt_newUser2{
 	width: 20vw;
 	height: auto;
-	padding-top: 3vw;
+	padding-top: 2vw;
 	padding-left: 1vw;
 }
 
-/********************************************************/
+
+
+

@@ -1,0 +1,170 @@
+/***************Enleve les effets chrome sur les input/button********/
+input[type=image]:focus {outline:0;}
+*{ -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-tap-highlight-color: transparent; /* For some Androids */ 
+} 
+/************************************/
+
+body{
+	margin: 0;	
+	background: #a0d8ef;
+}
+
+/***************Section Fieldset********************/
+fieldset{
+	border-radius: 5px;
+	border: 1px solid teal;
+    text-transform: capitalize;
+    overflow-y: auto;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+legend{
+    color: royalblue;
+    font-weight: bold;
+}
+
+#field_User{
+    min-height: 50vh;
+    max-height: 87vh;
+    overflow-y: auto;
+}
+
+/***************Section Formulaire***********************/
+form{
+    line-height: 150%;
+    display: none;
+}
+
+form input{
+	-webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+     -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+		  box-sizing: border-box;
+		  width: 100%;
+
+	border-radius: 5px;
+	border:none;
+	height: 1.3rem;
+    padding-left: 0.5rem;
+    text-transform: capitalize;
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/***********Barre de Menu**********************/
+#divIcon{
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#divIcon input{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+/***********Section Div No User********************/
+#div_NoUser{
+    text-align: center;
+    color: royalblue;
+}
+
+
+#divNewUser{
+	text-align: center;
+	height: 25vw;
+	width: 25vw;
+	border-radius: 50%;
+	border: ridge 5px teal;
+	margin: auto;
+	margin-top: 1vh;
+	background-color: lightslategray;
+}
+
+#divNewUser:hover{
+	background: yellowgreen;
+}
+
+
+#bt_newUser2{
+	width: 20vw;
+	height: auto;
+	padding-top: 2vw;
+	padding-left: 1vw;
+}
+
+
+/********************Section Div Ligne User*********************/
+.divLine{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    border-radius: 5px;
+    background-color: #c5dfea;
+    margin-bottom: 0.5vh;
+    padding-left: 1vw;
+    overflow: hidden;
+}
+
+/*****************Section Span Options*************************/
+.spanOptions{
+    float: right;
+    margin-right: 0;
+    cursor: pointer;
+
+}
+
+.spanOptions img{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+/***************Section Edit User***********************/
+#divEdit{
+	text-align: center;
+	height: 25vw;
+	width: 25vw;
+	border-radius: 50%;
+    border: ridge 5px teal;
+    margin: auto;
+    margin-top: 1vh;
+	background-color: lightslategray;
+}
+
+#divEdit:hover{
+	background: yellowgreen;
+}
+
+#bt_edit{
+	width: 20vw;
+	height: auto;
+	padding-top: 3vw;
+	padding-left: 1vw;
+}
+
+/****************Section Vicipo**********************/
+.output a {
+    display: block;
+    text-decoration: none;
+	color: royalblue;
+	text-align: left;
+}
+
+
+.output a:hover {
+	background: wheat;
+}
+
