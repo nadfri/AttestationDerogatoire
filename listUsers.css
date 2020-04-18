@@ -116,7 +116,7 @@ input::-webkit-outer-spin-button {
     background-color: #c5dfea;
     margin-bottom: 0.5vh;
     padding-left: 1vw;
-    overflow: hidden;
+    overflow: hidden; /*Evite le decalage des icones bin et Edit à chaque ligne*/
 }
 
 /*****************Section Span Options*************************/
@@ -167,4 +167,34 @@ input::-webkit-outer-spin-button {
 .output a:hover {
 	background: wheat;
 }
+
+/*************Section Pop Up********************/
+#divPopUp{
+    display: none;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 20%;
+    height: 22%;
+    border-radius: 5px;
+    color: royalblue;
+
+    z-index:1;
+    background-color: white;
+    text-align: center;
+}
+
+.btPopUp{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btPopUp button{
+    border: none;
+    width: 30%;
+    height: 5vh;
+}
+
+
+
 

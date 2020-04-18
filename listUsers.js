@@ -34,8 +34,6 @@ for (let user of tabUsers)
 
     const imgEdit = document.createElement("img");//ajout de l'icone crayon
     imgEdit.src = "img/pencil.png";
-    imgEdit.setAttribute("ref",user.id); //ajout d'un attribut d'identification
-
 
     const spanUser = document.createElement("span");
     spanUser.textContent =  `${user.prenom} ${user.nom}`;//Nom et prenom affichés
@@ -49,13 +47,24 @@ for (let user of tabUsers)
     spanOptions.appendChild(imgBin);
 
     //****************Bouton supprimer Utilisateur********************************** */
-    imgBin.onclick = (e) =>{
-        tabUsers = tabUsers.filter(user => user.id != e.target.getAttribute("ref"));
-        //filtre le tableau en retirant l'user ayant l'id correspondante à la ref de imgBin
-        console.log(tabUsers);
-        localStorage.setItem("usersList", JSON.stringify(tabUsers));
-        document.location.reload();
+    imgBin.onclick = (e) =>
+    {
+        field_User.style.pointerEvents = "none"; //desactive le clic sur le fieldset User
+        divPopUp.style.display = "block"; //affiche le pop up de confirmation
+
+        bt_non.onclick = () => {
+        divPopUp.style.display = "none";
+        field_User.style.pointerEvents = "auto";
         };
+
+        bt_oui.onclick = () => {
+            tabUsers = tabUsers.filter(user => user.id != e.target.getAttribute("ref"));
+            //filtre le tableau en retirant l'user ayant l'id correspondante à la ref de imgBin
+            console.log(tabUsers);
+            localStorage.setItem("usersList", JSON.stringify(tabUsers));
+            document.location.reload();
+        };
+    };
 
     //****************Bouton Editer Utilisateur********************************** */
     imgEdit.onclick = (e) =>{
@@ -95,6 +104,9 @@ function editUser(user)
         document.location.reload();
         e.preventDefault();
     };
+
+
+
 }
 
 
