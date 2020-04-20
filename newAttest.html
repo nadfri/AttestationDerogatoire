@@ -12,9 +12,10 @@
 
 <h1>Nouvelle Attestation</h1>
 
-<fieldset>
-    <legend>Utilisateurs</legend>
 
+
+<fieldset id="field_User">
+    <legend>Liste des utilisateurs</legend>
 </fieldset>
 
 
@@ -22,13 +23,15 @@
     <fieldset>
         <legend>Formulaire</legend>
 
-        <label for="dateSortie">Date de Sortie:</label><input id="dateSortie"  type="date" autocomplete="off" required>
+        <label for="dateSortie">Date de Sortie:</label>
+        <span id="spanCount">Pas d'utilisateurs selectionnés</span>
+        <input id="dateSortie"  type="date" autocomplete="off" required class="inputs">
         <br>
-        <label for="heureSortie">Heure de Sortie:</label><input id="heureSortie" type="time" autocomplete="off" required>
+        <label for="heureSortie">Heure de Sortie:</label><input id="heureSortie" type="time" autocomplete="off" required class="inputs">
         <br>
         <label for="motif">Motif:</label>
         <br>
-        <select id="motif" required>
+        <select id="motif" required class="inputs">
             <option value="">Choisir un motif</option>
             <option value="courses">Courses</option>
             <option value="sport">Sport (1h/1km)</option>
@@ -42,15 +45,17 @@
     </fieldset>
 
     <div id="divAjouter">
-        <input id="bt_newAttest" type="image" src="img/attestIcon.png">
-        <input id="bt_newUser1" type="image" src="img/userIcon.png" alt="nouvel utilisateur">
-    
+        <input id="bt_newAttest" type="image" src="img/doc.png">
     </div>
-    
 </form>
 
 
 
+<div id="divIcon">
+    <input type="image" src="img/contact.png"  onclick="document.location='listUsers.html'">
+    <input type="image" src="img/list.png"     onclick="document.location='index.html'">
+    <input type="image" src="img/userIcon.png" onclick="document.location='newUser.html'">
+</div>
     
 
 

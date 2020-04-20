@@ -113,7 +113,7 @@ input::-webkit-outer-spin-button {
     height: 1.8rem;
     line-height: 1.8rem;
     border-radius: 5px;
-    background-color: #c5dfea;
+    background-color: azure;
     margin-bottom: 0.5vh;
     padding-left: 1vw;
     overflow: hidden; /*Evite le decalage des icones bin et Edit à chaque ligne*/

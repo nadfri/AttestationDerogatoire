@@ -41,14 +41,14 @@ legend{
     height: 4rem;
 }
 
-/***********Section Div No User********************/
-#div_NoUser{
+/***********Section Div No User/No Attestation********************/
+#div_NoUser,#div_NoAttest{
     text-align: center;
     color: royalblue;
 }
 
 
-#divNewUser{
+#divNewUser,#divNewAttest{
 	text-align: center;
 	height: 25vw;
 	width: 25vw;
@@ -64,7 +64,7 @@ legend{
 }
 
 
-#bt_newUser2{
+#field_Attest input{
 	width: 20vw;
 	height: auto;
 	padding-top: 2vw;
@@ -72,5 +72,17 @@ legend{
 }
 
 
+/********************Section Div Ligne Attestation*********************/
+.divLine{
+    border-radius: 5px;
+    background-color: azure;
+    margin-bottom: 0.5vh;
+    padding-left: 1vw;
+    font-size: smaller;
+}
 
+.divLine img{
+    width: 1.8rem;
+    height: auto;
+}
 

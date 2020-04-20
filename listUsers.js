@@ -60,6 +60,7 @@ for (let user of tabUsers)
         bt_oui.onclick = () => {
             tabUsers = tabUsers.filter(user => user.id != e.target.getAttribute("ref"));
             //filtre le tableau en retirant l'user ayant l'id correspondante à la ref de imgBin
+            // (e) est celui de l'evenement imgBin.onclick et non bt_oui.onclick 
             console.log(tabUsers);
             localStorage.setItem("usersList", JSON.stringify(tabUsers));
             document.location.reload();
@@ -67,13 +68,13 @@ for (let user of tabUsers)
     };
 
     //****************Bouton Editer Utilisateur********************************** */
-    imgEdit.onclick = (e) =>{
+    imgEdit.onclick = () =>{
         editUser(user);
     };
 
 }
 
-
+//******************Fonction d'édition d'un utilisateur************************** */
 function editUser(user)
 {
     field_User.style.display = "none";
@@ -102,11 +103,8 @@ function editUser(user)
         localStorage.setItem("usersList", JSON.stringify(tabUsers));
 
         document.location.reload();
-        e.preventDefault();
+        return false;
     };
-
-
-
 }
 
 

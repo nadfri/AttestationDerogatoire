@@ -4,11 +4,20 @@ window.onload = () =>{
 let tabUsers = (JSON.parse(localStorage.getItem('usersList')) != null)? 
 JSON.parse(localStorage.getItem('usersList')): [];
 console.log(tabUsers);
+
 let scroll = true;
 
 
 
-//**********/Désactivation du bouton new Attestation si No Userr***/
+//************Desactive la barre de menu à l'apparition du clavier sur Mobile */
+document.onclick = () =>{
+    if (document.activeElement.tagName == "INPUT") divIcon.style.display = "none";
+    else divIcon.style.display = "flex";
+    //document.activeElement => donne le nom de l'element qui a le focus
+};
+
+
+//**********/Désactivation du bouton new Attestation si No User***/
 if(tabUsers.length == 0) 
 {
     bt_newAttest.disabled = true; //desactive le bouton new Attestation
@@ -52,15 +61,21 @@ form.onsubmit= (e) =>
 
     localStorage.setItem("usersList", JSON.stringify(tabUsers));
     console.log(tabUsers);
-    document.location = "listUsers.html";
+    document.location = "newAttest.html";
 
     e.preventDefault();
 }
 
-
-
-
-
+//***************************Verificateur de saisie****************** */
+let inputs = document.querySelectorAll("#form input");
+for (let input of inputs)
+{
+    input.onchange = () => 
+    {
+        if (form.checkValidity()) divAjouter.style.backgroundColor = "springGreen";
+        else divAjouter.style.backgroundColor = "pink";
+    };// form.checkValidity() retourne true/false en fonction de la validité
+ }
 
 
 /*********************************** */

@@ -5,6 +5,7 @@ input[type=image]:focus {outline:0;}
 } 
 /************************************/
 
+
 body{
 	margin: 0;	
 	background: #a0d8ef;
@@ -54,6 +55,8 @@ form input{
 }
 
 
+
+
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -78,7 +81,6 @@ input::-webkit-outer-spin-button {
 }
 
 /*****************Section Bouton Ajouter****************/
-
 #divAjouter{
 	text-align: center;
 	height: 25vw;
@@ -90,10 +92,6 @@ input::-webkit-outer-spin-button {
 	background-color: lightslategray;
 }
 
-#divAjouter:hover{
-	background: yellowgreen;
-}
-
 
 #ajouter{
 	width: 20vw;
@@ -102,7 +100,7 @@ input::-webkit-outer-spin-button {
 	padding-left: 1vw;
 }
 
-/***********Section Icon User/Attestation**********************/
+/***********Barre de Menu**********************/
 #divIcon{
     position: fixed;
     bottom: 0vh;

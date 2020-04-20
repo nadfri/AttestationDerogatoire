@@ -35,8 +35,34 @@ legend{
 	font-weight: bold;
 }
 
+#field_User{
+    min-height: 25vh;
+    max-height: 45vh;
+    overflow-y: auto;
+}
+
+/********************Section Div Ligne User*********************/
+.divLine{
+    border-radius: 5px;
+    background-color: azure;
+	margin-bottom: 0.5vh;
+	display: flex;
+}
+/********Section CheckBox***********************/
+.check{
+    width: 1.6rem;
+	height: 1.6rem;
+    cursor: pointer;
+}
+
+span{
+	margin: auto;
+	margin-left: 1vw;
+}
+
+
 /*****************Section Form*************************************/
-input,select{
+form input,select{
 	-webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
      -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
 		  box-sizing: border-box;
@@ -46,21 +72,69 @@ input,select{
 	border-radius: 5px;
 	border:none;
 	padding-left: 0.5rem;
+	background-color: white;
 }
 
 label{
     font-size: smaller;
 }
 
-/*************Bouton Nouvelle attestation/User******************/
+#spanCount{
+	font-size: smaller;
+	color: red;
+	font-style: oblique;
+	text-transform: none;
+	float: right;
+}
+
+.blinking{
+    animation:blinkingText 1.0s infinite;
+}
+@keyframes blinkingText{
+    0%{     color:red;}
+    99%{    color:transparent;}
+    100%{   color: red;}
+}
+
+/*************Bouton Nouvelle attestation/******************/
 #divAjouter{
-    text-align: center;
-    margin-top: 1vh;
-
+	text-align: center;
+	height: 23vw;
+	width: 23vw;
+	border-radius: 50%;
+	border: ridge 5px teal;
+	margin: auto;
+	margin-top: 1vh;
+	background-color: lightslategray;
 }
 
-#divAjouter input{
-    width: 20vw;
-    height: auto;
+
+
+
+#bt_newAttest{
+	width: 20vw;
+	height: auto;
+	padding-top: 1vw;
+	padding-left: 1vw;
+	background-color: transparent;
 }
-/************************************************
+
+/***********Barre de Menu**********************/
+#divIcon{
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#divIcon input{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+
+
