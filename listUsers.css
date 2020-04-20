@@ -92,11 +92,7 @@ input::-webkit-outer-spin-button {
 	border: ridge 5px teal;
 	margin: auto;
 	margin-top: 1vh;
-	background-color: lightslategray;
-}
-
-#divNewUser:hover{
-	background: yellowgreen;
+	background-color: springGreen;
 }
 
 
@@ -144,9 +140,7 @@ input::-webkit-outer-spin-button {
 	background-color: lightslategray;
 }
 
-#divEdit:hover{
-	background: yellowgreen;
-}
+
 
 #bt_edit{
 	width: 20vw;

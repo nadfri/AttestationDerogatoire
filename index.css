@@ -56,12 +56,10 @@ legend{
 	border: ridge 5px teal;
 	margin: auto;
 	margin-top: 1vh;
-	background-color: lightslategray;
+	background-color:springGreen;
 }
 
-#divNewUser:hover{
-	background: yellowgreen;
-}
+
 
 
 #field_Attest input{

@@ -66,12 +66,24 @@ for (let user of tabUsers)
             document.location.reload();
         };
     };
+    
 
     //****************Bouton Editer Utilisateur********************************** */
     imgEdit.onclick = () =>{
         editUser(user);
     };
 
+}
+
+//***************************Verificateur de saisie****************** */
+let inputs = document.querySelectorAll("#edit_form input");
+for (let input of inputs)
+{
+    input.onchange = () => 
+    {
+        if (edit_form.checkValidity()) divEdit.style.backgroundColor = "springGreen";
+        else divEdit.style.backgroundColor = "pink";
+    };// form.checkValidity() retourne true/false en fonction de la validité
 }
 
 //******************Fonction d'édition d'un utilisateur************************** */
