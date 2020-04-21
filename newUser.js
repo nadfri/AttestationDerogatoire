@@ -31,16 +31,13 @@ else
 codePostal.oninput = () => {
     if(codePostal.value.length > 2 && scroll == true) 
     {
-        window.scroll(0,200);
+        window.scroll(0,300);
         scroll = false;
     }
 }; // scroll afin de voir les propositions de ville caché par le clavier
 
 
 birthday.onfocus = () => birthday.type = "date";
-birthday.onblur  = () => birthday.type = "text"; 
-
-
 
 form.onsubmit= (e) =>
 {
@@ -68,7 +65,7 @@ form.onsubmit= (e) =>
 let inputs = document.querySelectorAll("#form input");
 for (let input of inputs)
 {
-    input.onchange = () => 
+    input.onblur = () => 
     {
         if (form.checkValidity()) divAjouter.style.backgroundColor = "springGreen";
         else divAjouter.style.backgroundColor = "pink";
