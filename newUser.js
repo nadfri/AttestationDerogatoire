@@ -35,11 +35,8 @@ codePostal.oninput = () => {
 }; // scroll afin de voir les propositions de ville caché par le clavier
 
 
-birthday.onfocus = () =>
-{
-    birthday.type = "date";
-    birthday.value = "1989-01-01";
-}
+birthday.onfocus = () => birthday.type = "date";
+
 
 
 form.onsubmit= (e) =>

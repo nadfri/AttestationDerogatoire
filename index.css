@@ -119,7 +119,7 @@ legend{
     position: absolute;
     margin-left: 10%;
     margin-right: 10%;
-    top: 20%;
+    top: 35%;
     height: 22%;
     border-radius: 5px;
     color: royalblue;
@@ -190,7 +190,19 @@ h2{
     margin-bottom: 0.25rem;
 }
 
+/*************QR CODE***********/
 
+figure{
+    text-align: center;
+}
+
+figure img{
+    width: 90%;
+}
+
+figcaption{
+    font-size: 0.6rem;
+}
 
 
 /***************/

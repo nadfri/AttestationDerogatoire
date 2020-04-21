@@ -77,7 +77,7 @@ for(let attestation of listAttest_Storage)
     divLine.appendChild(divInfo);
     divLine.appendChild(divBin);
 
-    
+
     //****************Bouton supprimer Utilisateur********************************** */
     imgBin.onclick = (e) =>
     {
@@ -144,19 +144,14 @@ function affichage_Attestation(tab)
 
     //*****************QRCODE******************* */
         const imgQR = document.createElement("img");
-        let info = `Cree le: ${tab.dateCreation} a ${tab.heureCreation};
-                    Nom: ${user.nom};
-                    Prenom: ${user.prenom};
-                    Naissance:${user.birthday} a ${user.placeBirth};
-                    Adresse: ${adresseID};
-                    Sortie: ${tab.dateSortie} a ${tab.heureSortie};
-                    Motifs: ${tab.motif}`;
+        let info = `Cree le:${tab.dateCreation} a ${tab.heureCreation};Nom:${user.nom};Prenom:${user.prenom};Naissance:${user.birthday} a ${user.placeBirth};Adresse:${adresseID};Sortie:${tab.dateSortie} a ${tab.heureSortie};Motifs:${tab.motif}`;
     
         imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&data="+info;
         //APi en ligne pour generer le QRCODE
-        
-        const pInfo = document.createElement("p");
-        pInfo.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
+
+        const figure = document.createElement("figure");
+        const figcaption = document.createElement("figcaption");
+        figcaption.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
 
     
         //*********************Version Ecrite******************** */
@@ -236,10 +231,11 @@ function affichage_Attestation(tab)
         `;
 
         fieldset.appendChild(legend);
-        fieldset.appendChild(imgQR);
-        fieldset.appendChild(pInfo);
-        
+        fieldset.appendChild(figure)
+        figure.appendChild(imgQR);
+        figure.appendChild(figcaption);
     }
+
 
 }
 
