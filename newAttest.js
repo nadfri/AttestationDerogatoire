@@ -92,7 +92,7 @@ bt_newAttest.onclick = () =>{
         let dateCreation  = Intl.DateTimeFormat("fr-FR",optionDate).format(Date.now());  
         let heureCreation = Intl.DateTimeFormat("fr-FR",{hour:"numeric", minute:"numeric"}).format(Date.now());
 
-        for(let user of usersForAttest) //ajout des données necessaire pour l'attestation
+  /*      for(let user of usersForAttest) //ajout des données necessaire pour l'attestation
         {
             user.dateCreation  = dateCreation;
             user.heureCreation = heureCreation;
@@ -102,6 +102,21 @@ bt_newAttest.onclick = () =>{
         }
 
         listAttest_Storage.push(usersForAttest);  //ajout des compos dans le storage
+        localStorage.setItem("listAttest_Storage", JSON.stringify(listAttest_Storage)); */
+
+        let objet_final = {
+                            listNom: usersForAttest,
+                            dateCreation: dateCreation,
+                            heureCreation: heureCreation,
+
+                            dateSortie: dateSortie.value.replace(/(\d{4})-(\d{2})-(\d{2})/,"$3/$2/$1"),// jj/mm/aaaa
+                            heureSortie: heureSortie.value,
+                            motif: motif.value,
+                            id: Date.now()
+                          };
+
+        listAttest_Storage.push(objet_final);  //ajout des compos dans le storage
+        listAttest_Storage.sort((a,b)=>b.id-a.id); //tri le tableau par id decroissante =>(Date.now)
         localStorage.setItem("listAttest_Storage", JSON.stringify(listAttest_Storage));
 
         document.location = "index.html"; //mise à jour de la liste

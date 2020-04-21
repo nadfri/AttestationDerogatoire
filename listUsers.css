@@ -120,12 +120,15 @@ input::-webkit-outer-spin-button {
     float: right;
     margin-right: 0;
     cursor: pointer;
-
 }
 
 .spanOptions img{
     width: 1.7rem;
     height: 1.7rem;
+}
+
+.bin{
+    background-color: #e1f7f7;
 }
 
 /***************Section Edit User***********************/

@@ -30,6 +30,7 @@ for (let user of tabUsers)
 
     const imgBin = document.createElement("img");//ajout de l'icone poubelle
     imgBin.src = "img/bin.png";
+    imgBin.className = "bin";
     imgBin.setAttribute("ref",user.id); //ajout d'un attribut d'identification
 
     const imgEdit = document.createElement("img");//ajout de l'icone crayon

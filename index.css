@@ -10,7 +10,7 @@ body{
 }
 
 /***************Section Fieldset********************/
-fieldset{
+#field_Attest{
 	border-radius: 5px;
 	border: 1px solid teal;
     text-transform: capitalize;
@@ -75,12 +75,122 @@ legend{
     border-radius: 5px;
     background-color: azure;
     margin-bottom: 0.5vh;
-    padding-left: 1vw;
     font-size: smaller;
+    display: flex;
 }
 
-.divLine img{
-    width: 1.8rem;
-    height: auto;
+
+/********Section Oeil/Bin***********************/
+.divImg{
+    width: 10%;
+    display: flex;
 }
 
+.divImg img{
+    width: 100%;
+	height: auto;
+    cursor: pointer;
+    margin: auto;
+}
+
+.divBin{
+    background-color: #e1f7f7;
+}
+
+
+/*******Section DivInfo***************/
+.divInfo{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spanDate, .spanMotif{
+    font-style: oblique;
+}
+
+.spanMotif{
+    color: blue;
+}
+
+/*************Section Pop Up********************/
+#divPopUp{
+    display: none;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 20%;
+    height: 22%;
+    border-radius: 5px;
+    color: royalblue;
+
+    z-index:1;
+    background-color: white;
+    text-align: center;
+}
+
+.btPopUp{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btPopUp button{
+    border: none;
+    width: 30%;
+    height: 5vh;
+}
+
+/*****************Attestation Ecrite********************************/
+
+#output{
+    overflow:auto ;
+    background-color: white;
+}
+
+#output fieldset{
+	border-radius: 5px;
+    border: 1px solid teal;
+    text-transform: capitalize;
+
+}
+
+
+#output span{
+    color: blue;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#output p{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.5rem;
+}
+
+
+
+h1{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight : normal;
+}
+
+.case img{
+    width: 1.5rem;
+    margin-right: 0.4rem;
+}
+
+.case{
+    margin-left: 0.2rem;
+    margin-bottom: 0.25rem;
+}
+
+
+
+
+/***************/
