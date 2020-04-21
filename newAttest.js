@@ -9,7 +9,6 @@ JSON.parse(localStorage.getItem('listAttest_Storage')): [];
 
 let count_users = 0; //sert à compter les checkbox
 
-
 //**************************Affichage Liste Users************************************************ */
 for (let user of tabUsers)
 {
@@ -91,18 +90,6 @@ bt_newAttest.onclick = () =>{
         let optionDate  = {day: "2-digit",   month: "2-digit", year:"numeric"};
         let dateCreation  = Intl.DateTimeFormat("fr-FR",optionDate).format(Date.now());  
         let heureCreation = Intl.DateTimeFormat("fr-FR",{hour:"numeric", minute:"numeric"}).format(Date.now());
-
-  /*      for(let user of usersForAttest) //ajout des données necessaire pour l'attestation
-        {
-            user.dateCreation  = dateCreation;
-            user.heureCreation = heureCreation;
-            user.dateSortie    = dateSortie.value.replace(/(\d{4})-(\d{2})-(\d{2})/,"$3/$2/$1");// jj/mm/aaaa
-            user.heureSortie   = heureSortie.value;
-            user.motif         = motif.value; 
-        }
-
-        listAttest_Storage.push(usersForAttest);  //ajout des compos dans le storage
-        localStorage.setItem("listAttest_Storage", JSON.stringify(listAttest_Storage)); */
 
         let objet_final = {
                             listNom: usersForAttest,

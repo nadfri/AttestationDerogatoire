@@ -8,8 +8,6 @@ let listAttest_Storage = (JSON.parse(localStorage.getItem('listAttest_Storage'))
 JSON.parse(localStorage.getItem('listAttest_Storage')): [];
 console.log(listAttest_Storage);
 
-
-
 //**********/Désactivation du bouton new Attestation si No User et de la div_NoUser***/
 if(tabUsers.length == 0) 
 {
@@ -31,7 +29,6 @@ else
 
 
 //**************************Liste Attestations************************************************ */
-
 for(let attestation of listAttest_Storage)
 {
     const divLine = document.createElement("div");
@@ -80,7 +77,7 @@ for(let attestation of listAttest_Storage)
     divLine.appendChild(divInfo);
     divLine.appendChild(divBin);
 
-
+    
     //****************Bouton supprimer Utilisateur********************************** */
     imgBin.onclick = (e) =>
     {
@@ -117,33 +114,6 @@ document.onscroll = () =>{
         divIcon.style.display="flex";
 }
 
-
-//**********************Affichage de la liste des Attestations******************* */
-function affichage_ListAttest(tab)
-{
-        let list_Users = "";
-        let icones =`<img class="option" src ="img/doc.png"    title="Afficher l'attestation">
-                    <img class="option" src ="img/qrcode.png" title="Afficher le QRCODE">`;
-
-    
-        for(let user of tab) list_Users += `${user.prenom}, `;
-
-        const div = document.createElement("div");
-        div.className = "list_Attest";
-
-        div.innerHTML = list_Users
-                    + icones 
-                    +`<br><i>le ${tab[0].dateSortie} à ${tab[0].heureSortie}, 
-                        Motif: ${tab[0].motif}</i>`;
-        //tab[0] ou tab[x], qu'importe, tous les users ont la meme date et heure de sortie
-        
-        div_Attestation.appendChild(div);
-        div_Attestation.style.display = "block";
-        fieldNew_Attest.style.display = "none"; 
-}
-
-
-
 //************************Affichage des Attestions Ecrites/QRCODE********************* */
 function affichage_Attestation(tab)
 {
@@ -151,7 +121,6 @@ function affichage_Attestation(tab)
 
     for(let user of tab.listNom)
     {
- 
        let prenomID      = user.prenom;
        let nomID         = user.nom;
        let birthdayID    = user.birthday;
@@ -161,8 +130,6 @@ function affichage_Attestation(tab)
 
        let dateSortieID    = tab.dateSortie;
        let heureSortieID   = tab.heureSortie;
-       let dateCreationID  = tab.dateCreation;
-       let heureCreationID = tab.heureCreation;
 
        let listCaseIMG           = [];
        listCaseIMG["travail"]    = "img/case.png";
@@ -175,8 +142,6 @@ function affichage_Attestation(tab)
 
        listCaseIMG[tab.motif] = "img/caseValid.png";
 
-
-
     //*****************QRCODE******************* */
         const imgQR = document.createElement("img");
         let info = `Cree le: ${tab.dateCreation} a ${tab.heureCreation};
@@ -188,6 +153,7 @@ function affichage_Attestation(tab)
                     Motifs: ${tab.motif}`;
     
         imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&data="+info;
+        //APi en ligne pour generer le QRCODE
         
         const pInfo = document.createElement("p");
         pInfo.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
@@ -276,20 +242,6 @@ function affichage_Attestation(tab)
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*********************************** */
 };

@@ -3,10 +3,6 @@ window.onload = () =>{
 /*********************************** */
 let tabUsers = (JSON.parse(localStorage.getItem('usersList')) != null)? 
 JSON.parse(localStorage.getItem('usersList')): [];
-console.log(tabUsers);
-
-
-
 
 //**********/Désactivation du bouton new Attestation si No User et de la div_NoUser***/
 if(tabUsers.length == 0) 
@@ -67,13 +63,10 @@ for (let user of tabUsers)
             document.location.reload();
         };
     };
-    
 
     //****************Bouton Editer Utilisateur********************************** */
-    imgEdit.onclick = () =>{
-        editUser(user);
-    };
-
+    imgEdit.onclick = () => editUser(user);
+    
 }
 
 //***************************Verificateur de saisie****************** */
@@ -119,10 +112,6 @@ function editUser(user)
         return false;
     };
 }
-
-
-
-
 
 
 /*********************************** */

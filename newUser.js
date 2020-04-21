@@ -7,8 +7,6 @@ console.log(tabUsers);
 
 let scroll = true;
 
-
-
 //************Desactive la barre de menu à l'apparition du clavier sur Mobile */
 document.onclick = () =>{
     if (document.activeElement.tagName == "INPUT") divIcon.style.display = "none";
