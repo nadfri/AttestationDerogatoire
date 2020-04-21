@@ -201,7 +201,7 @@ function affichage_Attestation(tab)
             Consultations et soins ne pouvant être assurés à distance et ne pouvant être
             différés; consultations et soins des patients atteints d'une
             affection de longue durée.</p>
-
+        <br>
         <p  class="case">
         <img src = ${listCaseIMG["famille"]} ALIGN=LEFT>
             Déplacements

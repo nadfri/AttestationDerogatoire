@@ -29,13 +29,16 @@ else
 
 
 codePostal.oninput = () => {
-    if(codePostal.value.length == 1 && scroll == true) 
+    if(codePostal.value.length > 2 && scroll == true) 
+    {
         window.scroll(0,200);
         scroll = false;
+    }
 }; // scroll afin de voir les propositions de ville caché par le clavier
 
 
 birthday.onfocus = () => birthday.type = "date";
+birthday.onblur  = () => birthday.type = "text"; 
 
 
 
