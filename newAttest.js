@@ -9,6 +9,12 @@ JSON.parse(localStorage.getItem('listAttest_Storage')): [];
 
 let count_users = 0; //sert à compter les checkbox
 
+let options = {day: "2-digit", month: "2-digit", year:"numeric"};
+dateSortie.value =  Intl.DateTimeFormat("fr-CA",options).format(Date.now());
+//fr-CA permet d'avoir une date conforme mm-dd-yyyy
+heureSortie.value =  Intl.DateTimeFormat("fr-FR",{hour: "numeric", minute: "numeric"}).format(Date.now());
+
+
 //**************************Affichage Liste Users************************************************ */
 for (let user of tabUsers)
 {
