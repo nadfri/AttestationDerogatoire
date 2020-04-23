@@ -78,7 +78,7 @@ for (let input of inputs)
  }
 
 //*******************************Nouvelle Attestation**************************************** */
-bt_newAttest.onclick = () =>{
+form.onsubmit = (e) =>{
 
     let usersForAttest = tabUsers.filter(user=> user.check == true);
     //creation d'un nouveau tableau avec les users checked
@@ -115,7 +115,7 @@ bt_newAttest.onclick = () =>{
         document.location = "index.html"; //mise à jour de la liste
     }
 
-    return false;
+    e.preventDefault();
 };
 
 /*********************************** */
