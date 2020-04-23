@@ -16,3 +16,5 @@ https://vicopo.selfbuild.fr/
 -QR Code Generator
 http://goqr.me/api/doc/create-qr-code/
 
+Lien pour telecharger l'APK, afin d'installer l'application sur telephone (hors Iphone):
+https://drive.google.com/file/d/1f8LozHAmkBgkLH4u_8UqI3V9zAxW6BLd/view?usp=sharing
