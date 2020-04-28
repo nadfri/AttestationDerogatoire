@@ -8,7 +8,7 @@ input[type=image]:focus {outline:0;}
 
 body{
 	margin: 0;	
-	background: #a0d8ef;
+	background: #f4f4f4;
 }
 
 h1{
@@ -18,6 +18,7 @@ h1{
 	font-style: italic;
 	color: teal;
 	font-size: 1.5rem;
+	text-shadow: 2px 1px 2px #919191;
 }
 
 /***************Section Fieldset********************/
@@ -27,6 +28,7 @@ fieldset{
 	display: block;
 	padding-top: 0;
 	text-transform: capitalize;
+	box-shadow: 3px 1px 2px 1px #d8d8d8;
 }
 
 legend{
@@ -48,7 +50,7 @@ form input{
 
 	border-radius: 5px;
 	border:none;
-	height: 1.3rem;
+	height: 1.5rem;
 	padding-left: 0.5rem;
 	text-transform: capitalize;
 }
@@ -89,6 +91,7 @@ input::-webkit-outer-spin-button {
 	margin: auto;
 	margin-top: 1vh;
 	background-color: lightslategray;
+	box-shadow: 4px 4px 2px -2px #919191;
 }
 
 
@@ -113,7 +116,9 @@ input::-webkit-outer-spin-button {
 #divIcon input
 {
     width: 4rem;
-    height: auto;
+	height: 4rem;
+	border-radius: 50%;
+    box-shadow: 4px 4px 2px -2px #919191;
 }
 
 

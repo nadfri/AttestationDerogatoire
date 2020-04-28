@@ -7,7 +7,7 @@ input[type=image]:focus {outline:0;}
 /**********************************************/
 body{
 	margin: 0;	
-	background: #a0d8ef;
+	background: #f4f4f4;
 }
 
 
@@ -18,6 +18,7 @@ h1{
 	font-style: italic;
 	color: teal;
 	font-size: 1.5rem;
+	text-shadow: 2px 1px 2px #919191;
 }
 
 /***********************Section Fieldset********************/
@@ -27,7 +28,8 @@ fieldset{
 	display: block;
     padding-top: 0;
     text-transform: capitalize;
-    overflow-y: auto;
+	overflow-y: auto;
+	box-shadow: 3px 1px 2px 1px #d8d8d8;
 }
 
 legend{
@@ -44,9 +46,10 @@ legend{
 /********************Section Div Ligne User*********************/
 .divLine{
     border-radius: 5px;
-    background-color: azure;
+    background-color: white;
 	margin-bottom: 0.5vh;
 	display: flex;
+	box-shadow: 3px 4px 4px -1px #7F7F7F;
 }
 /********Section CheckBox***********************/
 .check{
@@ -106,6 +109,7 @@ label{
 	margin: auto;
 	margin-top: 1vh;
 	background-color: lightslategray;
+	box-shadow: 4px 4px 2px -2px #919191;
 }
 
 
@@ -131,7 +135,9 @@ label{
 
 #divIcon input{
     width: 4rem;
-    height: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+    box-shadow: 4px 4px 2px -2px #919191;
 }
 
 

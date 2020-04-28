@@ -6,7 +6,7 @@ input[type=image]:focus {outline:0;}
 /************************************/
 body{
 	margin: 0;	
-	background: #a0d8ef;
+	background: #f4f4f4;
 }
 
 /***************Section Fieldset********************/
@@ -14,11 +14,11 @@ body{
 	border-radius: 5px;
 	border: 1px solid teal;
     text-transform: capitalize;
-    min-height: 50vh;
     max-height: 87vh;
     overflow-y: auto;
     padding-right: 1vw;
     padding-left: 1vw;
+    box-shadow: 3px 1px 2px 1px #d8d8d8;
 }
 
 legend{
@@ -37,8 +37,11 @@ legend{
 }
 
 #divIcon input{
+    margin: 0;
     width: 4rem;
     height: 4rem;
+    border-radius: 50%;
+    box-shadow: 4px 4px 2px -2px #919191;
 }
 
 /***********Section Div No User/No Attestation********************/
@@ -56,7 +59,8 @@ legend{
 	border: ridge 5px teal;
 	margin: auto;
 	margin-top: 1vh;
-	background-color:springGreen;
+    background-color:springGreen;
+    box-shadow: 4px 4px 2px -2px #919191;
 }
 
 
@@ -73,10 +77,11 @@ legend{
 /********************Section Div Ligne Attestation*********************/
 .divLine{
     border-radius: 5px;
-    background-color: azure;
+    background-color: white;
     margin-bottom: 0.5vh;
     font-size: smaller;
     display: flex;
+    box-shadow: 3px 4px 4px -1px #7F7F7F;
 }
 
 
@@ -127,6 +132,7 @@ legend{
     z-index:1;
     background-color: white;
     text-align: center;
+    box-shadow: 3px 4px 4px -1px #7F7F7F;
 }
 
 .btPopUp{
@@ -138,6 +144,7 @@ legend{
     border: none;
     width: 30%;
     height: 5vh;
+    box-shadow: 4px 4px 2px -2px #919191;
 }
 
 /*****************Attestation Ecrite********************************/
@@ -183,6 +190,7 @@ h2{
 .case img{
     width: 1.5rem;
     margin-right: 0.4rem;
+    box-shadow: 3px 4px 2px -2px #919191;
 }
 
 .case{
