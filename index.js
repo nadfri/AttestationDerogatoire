@@ -160,7 +160,8 @@ function affichage_Attestation(tab)
                     Naissance:${user.birthday} à ${user.placeBirth}%3B
                     Adresse:${adresseID}%3B
                     Sortie:${tab.dateSortie} à ${tab.heureSortie}%3B
-                    Motifs:${tab.motif}%3B`;
+                    Motifs:${tab.motif}%3B
+                    `;
     
         imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&data="+info;
         //APi en ligne pour generer le QRCODE
@@ -193,7 +194,7 @@ function affichage_Attestation(tab)
 
         <p  class="case">
         <img src = ${listCaseIMG["achats"]}>
-        Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité 3 dans des établissements dont les activités demeurent autorisées, le retrait de commande et les livraisons à domicile. 
+        Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité dans des établissements dont les activités demeurent autorisées, le retrait de commande et les livraisons à domicile. 
         </p>
 
         <p  class="case">
@@ -246,6 +247,8 @@ window.onbeforeinstallprompt = (event) =>
 {
     event.preventDefault(); // annuler la banniere par defaut
     installBtn.classList.add("slide"); //affiche la banniere perso
+    setTimeout(()=>installBtn.classList.remove("slide"),9000);
+    setTimeout(()=>installBtn.style.display = "none",10000);
 
     installBtn.onclick = () => 
     {
