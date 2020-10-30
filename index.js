@@ -257,8 +257,10 @@ window.onbeforeinstallprompt = (event) =>
 
 //*************Service Worker ******************/
 //Register service worker to control making site work offline
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
+if ('serviceWorker' in navigator) 
+{
+    window.addEventListener('load', () => 
+    {
       navigator.serviceWorker
         .register('sw.js')
         .then(registration => {
@@ -272,7 +274,7 @@ if ('serviceWorker' in navigator) {
           );
         });
     });
-  }
+}
 
 
 /************Permettre le 100vh sur mobile */

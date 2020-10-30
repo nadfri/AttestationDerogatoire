@@ -2,7 +2,8 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 
 console.log("Script sw.js Chargé!");
 
-if (workbox) {
+if (workbox) 
+{
   console.log(`WorkBox of AttestationV2 loaded🎉`);
   workbox.routing.registerRoute(
     new RegExp('/.*'), //cached all files
@@ -25,5 +26,7 @@ if (workbox) {
   //   })
   // );
 
-} else {console.log(`Boo! Workbox didn't load 😬`);}
+} 
+
+else console.log(`Boo! Workbox didn't load 😬`);
 
