@@ -211,19 +211,18 @@ figcaption{
 /**************Bouton installer********/
 .installBtn{
     position: absolute;
-    bottom: 4.2rem;
-    left: 4%;
-    height: 2.5rem;
-    width: 92%;
+    bottom: 4rem;
+    left: 0;
+    height: 3rem;
+    width: 100%;
     border: none;
     outline: none;
-    border-radius: 5px;
     background-color: teal;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 1s;
     transform: translateX(-100%);
   }
 
