@@ -27,7 +27,6 @@ legend{
 }
 
 #field_User{
-    min-height: 50vh;
     max-height: 87vh;
     overflow-y: auto;
 }

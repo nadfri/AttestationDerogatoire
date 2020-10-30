@@ -1,9 +1,16 @@
-window.onload = () =>{
-    "use strict";
+"use strict";
 /*********************************** */
 let tabUsers = (JSON.parse(localStorage.getItem('usersList')) != null)? 
 JSON.parse(localStorage.getItem('usersList')): [];
 console.log(tabUsers);
+
+if(tabUsers.length > 0)
+{
+    nom.value = tabUsers[0].nom;
+    adresse.value = tabUsers[0].adresse;
+    codePostal.value = tabUsers[0].codePostal;
+    city.value = tabUsers[0].ville;
+}
 
 let scroll = true;
 
@@ -42,7 +49,9 @@ birthday.onfocus = () => birthday.type = "date";
 form.onsubmit= (e) =>
 {
     let id = Date.now();
-    tabUsers.push({prenom: prenom.value,
+    tabUsers.push(
+        {
+            prenom: prenom.value,
             nom: nom.value,
             birthday: birthday.value.replace(/(\d{4})-(\d{2})-(\d{2})/,"$3/$2/$1"),
             placeBirth: placeBirth.value,
@@ -72,6 +81,5 @@ for (let input of inputs)
     };// form.checkValidity() retourne true/false en fonction de la validité
  }
 
+/******************AutoComplete OFF***************** */
 
-/*********************************** */
-};

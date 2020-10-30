@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /***************Enleve les effets chrome sur les input/button********/
 input[type=image]:focus {outline:0;}
 *{ -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -6,7 +7,8 @@ input[type=image]:focus {outline:0;}
 /************************************/
 body{
 	margin: 0;	
-	background: #f4f4f4;
+    background: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
 }
 
 /***************Section Fieldset********************/
@@ -24,6 +26,7 @@ body{
 legend{
     color: royalblue;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 /***********Barre de Menu**********************/
@@ -37,7 +40,6 @@ legend{
 }
 
 #divIcon input{
-    margin: 0;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -49,7 +51,6 @@ legend{
     text-align: center;
     color: royalblue;
 }
-
 
 #divNewUser,#divNewAttest{
 	text-align: center;
@@ -63,16 +64,12 @@ legend{
     box-shadow: 4px 4px 2px -2px #919191;
 }
 
-
-
-
 #field_Attest input{
 	width: 20vw;
 	height: auto;
 	padding-top: 2vw;
 	padding-left: 1vw;
 }
-
 
 /********************Section Div Ligne Attestation*********************/
 .divLine{
@@ -83,7 +80,6 @@ legend{
     display: flex;
     box-shadow: 3px 4px 4px -1px #7F7F7F;
 }
-
 
 /********Section Oeil/Bin***********************/
 .divImg{
@@ -101,7 +97,6 @@ legend{
 .divBin{
     background-color: #e1f7f7;
 }
-
 
 /*******Section DivInfo***************/
 .divInfo{
@@ -157,23 +152,20 @@ legend{
 #output fieldset{
 	border-radius: 5px;
     border: 1px solid teal;
-    text-transform: capitalize;
-
 }
 
-
-#output span{
+.colorSpan{
     color: blue;
     font-weight: bold;
     text-transform: capitalize;
 }
 
+
 #output p{
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    width: 85vw;
 }
-
-
 
 h1{
     text-align: center;
@@ -183,20 +175,23 @@ h1{
 
 h2{
     text-align: center;
-    font-size: 0.7rem;
-    font-weight : normal;
+    font-size: 0.5rem;
 }
 
+.case{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
 .case img{
-    width: 1.5rem;
+    min-width: 2rem;
+    height: 2rem;
     margin-right: 0.4rem;
     box-shadow: 3px 4px 2px -2px #919191;
 }
 
-.case{
-    margin-left: 0.2rem;
-    margin-bottom: 0.25rem;
-}
 
 /*************QR CODE***********/
 
@@ -213,4 +208,25 @@ figcaption{
 }
 
 
-/***************/
+/**************Bouton installer********/
+.installBtn{
+    position: absolute;
+    bottom: 4.2rem;
+    left: 4%;
+    height: 2.5rem;
+    width: 92%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+  }
+
+  .slide{
+    transform: translateX(0%);
+  }

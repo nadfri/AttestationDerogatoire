@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="newAttest.css">
-    <script src="newAttest.js"></script>
+    <script src="newAttest.js" defer></script>
 </head>
 <body>
 
 <h1>Nouvelle Attestation</h1>
 
-
-
 <fieldset id="field_User">
     <legend>Liste des utilisateurs</legend>
 </fieldset>
-
 
 <form id="form">
     <fieldset>
@@ -33,12 +30,14 @@
         <br>
         <select id="motif" required class="inputs">
             <option value="">Choisir un motif</option>
-            <option value="courses">Courses</option>
-            <option value="sport">Sport (1h/1km)</option>
             <option value="travail">Activité Professionnelle</option>
+            <option value="achats">Achats et Fournitures</option>
+            <option value="enfants">Enfants</option>
+            <option value="sport_animaux">Sport&Animaux 1h/1km</option>
             <option value="santé">Consultations et Soins</option>
             <option value="famille">Assistance Famille</option>
-            <option value="judiciaire">Convocation Judiciaire</option>
+            <option value="handicap">Handicap</option>
+            <option value="convocation">Convocation Judiciaire</option>
             <option value="missions">Mission d'interet Générale</option>
         </select>
 
@@ -50,15 +49,12 @@
 </form>
 
 
-
 <div id="divIcon">
     <input type="image" src="img/contact.png"  onclick="document.location='listUsers.html'">
     <input type="image" src="img/list.png"     onclick="document.location='index.html'">
     <input type="image" src="img/userIcon.png" onclick="document.location='newUser.html'">
 </div>
     
-
-
 
 </body>
 </html>

@@ -1,5 +1,4 @@
-window.onload = () =>{
-    "use strict";
+"use strict";
 /*********************************** */
 let tabUsers = (JSON.parse(localStorage.getItem('usersList')) != null)? 
 JSON.parse(localStorage.getItem('usersList')): [];
@@ -114,6 +113,4 @@ function editUser(user)
 }
 
 
-/*********************************** */
-};
 
