@@ -12,8 +12,6 @@ if(tabUsers.length > 0)
     city.value = tabUsers[0].ville;
 }
 
-let scroll = true;
-
 //************Desactive la barre de menu à l'apparition du clavier sur Mobile */
 document.onclick = () =>{
     if (document.activeElement.tagName == "INPUT") divIcon.style.display = "none";
@@ -36,11 +34,8 @@ else
 
 
 codePostal.oninput = () => {
-    if(codePostal.value.length > 2 && scroll == true) 
-    {
-        window.scroll(0,300);
-        scroll = false;
-    }
+    if(codePostal.value.length > 1) 
+        window.scroll({top: 300,behavior: 'smooth'});
 }; // scroll afin de voir les propositions de ville caché par le clavier
 
 

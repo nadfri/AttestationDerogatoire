@@ -4,8 +4,6 @@ input[type=image]:focus {outline:0;}
    -webkit-tap-highlight-color: transparent; /* For some Androids */ 
 } 
 /************************************/
-
-
 body{
 	margin: 0;	
 	background: #f4f4f4;
@@ -55,9 +53,6 @@ form input{
 	text-transform: capitalize;
 }
 
-
-
-
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -76,7 +71,6 @@ input::-webkit-outer-spin-button {
 	text-align: left;
 }
 
-
 .output a:hover {
 	background: wheat;
 }
@@ -94,7 +88,6 @@ input::-webkit-outer-spin-button {
 	box-shadow: 4px 4px 2px -2px #919191;
 }
 
-
 #ajouter{
 	width: 20vw;
 	height: auto;
@@ -110,7 +103,6 @@ input::-webkit-outer-spin-button {
     display: flex;
     justify-content: space-around;
     background-color: rgba(0,0,0,0.1);
-
 }
 
 #divIcon input
