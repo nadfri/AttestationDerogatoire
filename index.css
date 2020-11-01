@@ -79,7 +79,7 @@ legend{
     font-size: smaller;
     display: flex;
     box-shadow: 3px 4px 4px -1px #7F7F7F;
-    min-height: 10vh;
+    height: 10vh;
 }
 
 /********Section Oeil/Bin***********************/
