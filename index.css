@@ -203,7 +203,12 @@ figure{
 }
 
 figure img{
-    width: 90%;
+    width: 70vw;
+    height: 70vw;
+    background-image: url(./img/Infinity.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 figcaption{
@@ -213,7 +218,7 @@ figcaption{
 
 /**************Bouton installer********/
 .installBtn{
-    position: absolute;
+    position: fixed;
     bottom: 4rem;
     left: -100%;
     height: 3rem;
@@ -226,7 +231,6 @@ figcaption{
     justify-content: center;
     align-items: center;
     transition: all 1s;
-
   }
 
   .slide{

@@ -163,8 +163,9 @@ function affichage_Attestation(tab)
                     Motifs:${tab.motif}%3B
                     `;
     
-        imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&data="+info;
         //APi en ligne pour generer le QRCODE
+        imgQR.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&ecc=M&data="+info;
+        //imgQR.alt = "QR Code en attente de connexion...";
 
         const figure = document.createElement("figure");
         const figcaption = document.createElement("figcaption");
