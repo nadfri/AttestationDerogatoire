@@ -104,7 +104,7 @@ for(let attestation of listAttest_Storage)
         {
             affichage_Attestation(attestation);
             open = true;
-            h1.scrollIntoView({behavior: "smooth"}); //scroll vers le h1 de l'attestation
+            document.querySelector("h1").scrollIntoView({behavior: "smooth"}); //scroll vers le h1 de l'attestation
             imgEye.src = "img/oeil_close.png";
 
         }
@@ -182,7 +182,7 @@ function affichage_Attestation(tab)
         legend.textContent = user.prenom;
         output.appendChild(fieldset);
         fieldset.innerHTML = `
-        <h1 id="h1">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
+        <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
         <h2>
         En application du décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire
         </h2>
