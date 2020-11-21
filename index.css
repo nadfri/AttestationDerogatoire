@@ -208,11 +208,17 @@ figure img{
     background-image: url(./img/Infinity.svg);
     background-position: center;
     background-repeat: no-repeat;
+    transition: all .5s;
 
 }
 
 figcaption{
     font-size: 0.6rem;
+}
+
+.scale{
+    transform: scale(1.4);
+
 }
 
 

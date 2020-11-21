@@ -179,6 +179,8 @@ function affichage_Attestation(tab)
         const figcaption = document.createElement("figcaption");
         figcaption.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
 
+        imgQR.onclick = () => imgQR.classList.toggle("scale"); //zoom sur le QRCode
+
     
         //*********************Version Ecrite******************** */
         const fieldset = document.createElement("fieldset");
