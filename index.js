@@ -179,7 +179,13 @@ function affichage_Attestation(tab)
         const figcaption = document.createElement("figcaption");
         figcaption.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
 
-        imgQR.onclick = () => imgQR.classList.toggle("scale"); //zoom sur le QRCode
+
+        imgQR.style.zIndex = "50000";
+        imgQR.onclick = () => 
+        {
+            imgQR.classList.toggle("scale"); //zoom sur le QRCode
+            overlay.style.display = imgQR.classList.contains("scale")? "block" : "none";
+        }
 
     
         //*********************Version Ecrite******************** */
