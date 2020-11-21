@@ -7,6 +7,7 @@ let listAttest_Storage = (JSON.parse(localStorage.getItem('listAttest_Storage'))
 JSON.parse(localStorage.getItem('listAttest_Storage')): [];
 //console.log(listAttest_Storage);
 
+
 //**********/Désactivation du bouton new Attestation si No User et de la div_NoUser***/
 if(tabUsers.length == 0) 
 {
@@ -38,6 +39,7 @@ for(let attestation of listAttest_Storage)
     divEye.className = "divImg";
     const imgEye = document.createElement("img");
     imgEye.src = "img/oeil.png";
+    imgEye.classList.add("eye");
     divEye.appendChild(imgEye);
 
 //*** */
@@ -98,23 +100,25 @@ for(let attestation of listAttest_Storage)
     };
 
     //****************Bouton Voir Attestation **************************************/
-    let open = false;
-    divLine.onclick = (e) => {
-        if(!Object.is(e.target, imgBin) && open == false) //ne tient pas compte du click sur ImgBin
+    divLine.onclick = (e) => 
+    {
+        if(!Object.is(e.target, imgBin) && imgEye.getAttribute("src") == "img/oeil.png") //ne tient pas compte du click sur ImgBin
         {
+            //On remet tous les yeux à ouvert
+            const imgEyes = document.querySelectorAll(".eye"); 
+            for (let img of imgEyes) img.src = "img/oeil.png";
+
             affichage_Attestation(attestation);
-            open = true;
             document.querySelector("h1").scrollIntoView({behavior: "smooth"}); //scroll vers le h1 de l'attestation
             imgEye.src = "img/oeil_close.png";
-
         }
+
         else
         {
-            output.innerHTML = ""; //vide la div d'affichage
-            open = false;
+            output.innerHTML = ""; //vide la div
             imgEye.src = "img/oeil.png";
         }
-    }
+    };
 } 
 
 
