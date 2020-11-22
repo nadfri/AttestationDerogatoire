@@ -125,9 +125,15 @@ for(let attestation of listAttest_Storage)
 //*********************Masquer la barre de Menu lors du scroll */
 document.onscroll = () =>{
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
-        divIcon.style.display="none";
+    {
+        divIcon.classList.add("hidden");
+        //divIcon.style.display="none";
+    }
     else
-        divIcon.style.display="flex";
+    {
+        //divIcon.style.display="flex";
+        divIcon.classList.remove("hidden");
+    }
 }
 
 //************************Affichage des Attestions Ecrites/QRCODE********************* */
@@ -180,7 +186,6 @@ function affichage_Attestation(tab)
         figcaption.textContent = `Date de création: ${tab.dateCreation} à ${tab.heureCreation}`;
 
 
-        imgQR.style.zIndex = "50000";
         imgQR.onclick = () => 
         {
             imgQR.classList.toggle("scale"); //zoom sur le QRCode

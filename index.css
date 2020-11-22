@@ -32,11 +32,12 @@ legend{
 /***********Barre de Menu**********************/
 #divIcon{
     position: fixed;
-    bottom: 0vh;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0,0,0,0.1);
+    transition: all 0.5s;
 }
 
 #divIcon input{
@@ -44,6 +45,11 @@ legend{
     height: 4rem;
     border-radius: 50%;
     box-shadow: 4px 4px 2px -2px #919191;
+}
+
+.hidden{
+    transform: translateY(100%);
+
 }
 
 /***********Section Div No User/No Attestation********************/
