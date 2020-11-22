@@ -21,6 +21,7 @@ body{
     padding-right: 1vw;
     padding-left: 1vw;
     box-shadow: 3px 1px 2px 1px #d8d8d8;
+    transition: all 1s;
 }
 
 legend{
@@ -70,6 +71,7 @@ legend{
     box-shadow: 4px 4px 2px -2px #919191;
 }
 
+
 #field_Attest input{
 	width: 20vw;
 	height: auto;
@@ -87,6 +89,10 @@ legend{
     box-shadow: 3px 4px 4px -1px #7F7F7F;
     min-height: 11vh;
     transition: all 0.5s;
+}
+
+.slideRight{
+    transform: translate(150%);
 }
 
 /********Section Oeil/Bin***********************/
@@ -130,6 +136,7 @@ legend{
     position: absolute;
     margin-left: 10%;
     margin-right: 10%;
+    padding: 10px;
     top: 35%;
     height: 22%;
     border-radius: 5px;

@@ -79,7 +79,7 @@ for(let attestation of listAttest_Storage)
     divLine.appendChild(divBin);
 
 
-    //****************Bouton supprimer Utilisateur********************************** */
+    //****************Bouton supprimer Attestation********************************** */
     imgBin.onclick = (e) =>
     {
         divPopUp.style.display = "block"; //affiche le pop up de confirmation
@@ -87,6 +87,7 @@ for(let attestation of listAttest_Storage)
         divIcon.classList.add("hidden");
 
         bt_non.onclick = () => {
+        divPopUp.classList.remove("grow");
         divPopUp.style.display = "none";
         overlay.style.display = "none";
         divIcon.classList.remove("hidden");
@@ -97,7 +98,14 @@ for(let attestation of listAttest_Storage)
                 attestation.id != e.target.getAttribute("ref"));
             //filtre le tableau en retirant l'attestation ayant l'id correspondante à la ref de imgBin
             localStorage.setItem("listAttest_Storage", JSON.stringify(listAttest_Storage));
-            document.location.reload();
+            //document.location.reload();
+            
+            divPopUp.style.display = "none";
+            overlay.style.display = "none";
+            divIcon.classList.remove("hidden");
+
+            divLine.classList.add("slideRight");
+            setTimeout(()=>divLine.remove(),500);
         };
     };
 
@@ -186,8 +194,8 @@ function affichage_Attestation(tab)
         imgQR.onclick = () => 
         {
             imgQR.classList.toggle("scale"); //zoom sur le QRCode
-            overlay.style.display        = imgQR.classList.contains("scale")? "block" : "none"; //affiche l'overlay
-        }
+            overlay.style.display = imgQR.classList.contains("scale")? "block" : "none";
+        };
 
     
         //*********************Version Ecrite******************** */
