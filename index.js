@@ -187,7 +187,6 @@ function affichage_Attestation(tab)
         {
             imgQR.classList.toggle("scale"); //zoom sur le QRCode
             overlay.style.display        = imgQR.classList.contains("scale")? "block" : "none"; //affiche l'overlay
-            document.body.style.overflow = imgQR.classList.contains("scale")? "hidden" : ""; //bloque le scroll
         }
 
     
