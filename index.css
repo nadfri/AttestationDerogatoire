@@ -111,6 +111,7 @@ legend{
 
 .divBin{
     background-color: #e1f7f7;
+    border-bottom-right-radius: 5px;
 }
 
 /*******Section DivInfo***************/
