@@ -82,12 +82,14 @@ for(let attestation of listAttest_Storage)
     //****************Bouton supprimer Utilisateur********************************** */
     imgBin.onclick = (e) =>
     {
-        field_Attest.style.pointerEvents = "none"; //desactive le clic sur le fieldset Attest
         divPopUp.style.display = "block"; //affiche le pop up de confirmation
+        overlay.style.display = "block";
+        divIcon.classList.add("hidden");
 
         bt_non.onclick = () => {
         divPopUp.style.display = "none";
-        field_Attest.style.pointerEvents = "auto";
+        overlay.style.display = "none";
+        divIcon.classList.remove("hidden");
         };
 
         bt_oui.onclick = () => {
@@ -125,15 +127,10 @@ for(let attestation of listAttest_Storage)
 //*********************Masquer la barre de Menu lors du scroll */
 document.onscroll = () =>{
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
-    {
         divIcon.classList.add("hidden");
-        //divIcon.style.display="none";
-    }
+
     else
-    {
-        //divIcon.style.display="flex";
         divIcon.classList.remove("hidden");
-    }
 }
 
 //************************Affichage des Attestions Ecrites/QRCODE********************* */
@@ -189,7 +186,8 @@ function affichage_Attestation(tab)
         imgQR.onclick = () => 
         {
             imgQR.classList.toggle("scale"); //zoom sur le QRCode
-            overlay.style.display = imgQR.classList.contains("scale")? "block" : "none";
+            overlay.style.display        = imgQR.classList.contains("scale")? "block" : "none"; //affiche l'overlay
+            document.body.style.overflow = imgQR.classList.contains("scale")? "hidden" : ""; //bloque le scroll
         }
 
     
