@@ -107,11 +107,16 @@ legend{
 	height: auto;
     cursor: pointer;
     margin: auto;
+    transition: all 0.7s;
 }
 
 .divBin{
     background-color: #e1f7f7;
     border-bottom-right-radius: 5px;
+}
+
+.divImg img:active{
+    transform: scale(5);
 }
 
 /*******Section DivInfo***************/

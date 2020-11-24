@@ -5,7 +5,7 @@ JSON.parse(localStorage.getItem('usersList')): [];
 
 let listAttest_Storage = (JSON.parse(localStorage.getItem('listAttest_Storage')) != null)? 
 JSON.parse(localStorage.getItem('listAttest_Storage')): [];
-//console.log(listAttest_Storage);
+//console.table(listAttest_Storage);
 
 
 //**********/Désactivation du bouton new Attestation si No User et de la div_NoUser***/
