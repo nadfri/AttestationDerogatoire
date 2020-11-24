@@ -54,14 +54,18 @@ legend{
 .check{
     width: 1.6rem;
 	height: 1.6rem;
-    cursor: pointer;
+	cursor: pointer;
+	transition: all .7s;
+}
+
+.check:active{
+	transform: scale(3);
 }
 
 span{
 	margin: auto;
 	margin-left: 1vw;
 }
-
 
 /*****************Section Form*************************************/
 form input,select{
@@ -110,9 +114,6 @@ label{
 	background-color: lightslategray;
 	box-shadow: 4px 4px 2px -2px #919191;
 }
-
-
-
 
 #bt_newAttest{
 	width: 20vw;
