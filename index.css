@@ -205,7 +205,7 @@ h2{
 .case{
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 

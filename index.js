@@ -158,18 +158,18 @@ function affichage_Attestation(tab)
        let dateSortieID    = tab.dateSortie;
        let heureSortieID   = tab.heureSortie;
 
-       let listCaseIMG              = [];
-       listCaseIMG["travail"]       = "img/case.png";
-       listCaseIMG["achats"]        = "img/case.png";
-       listCaseIMG["santé"]         = "img/case.png";
-       listCaseIMG["famille"]       = "img/case.png";
-       listCaseIMG["handicap"]      = "img/case.png";
-       listCaseIMG["sport_animaux"] = "img/case.png";
-       listCaseIMG["convocation"]   = "img/case.png";
-       listCaseIMG["missions"]      = "img/case.png";
-       listCaseIMG["enfants"]       = "img/case.png";
+       let listCaseIMG                        = [];
+       listCaseIMG["travail"]                 = "img/case.png";
+       listCaseIMG["achats_culturel_cultuel"] = "img/case.png";
+       listCaseIMG["santé"]                   = "img/case.png";
+       listCaseIMG["famille"]                 = "img/case.png";
+       listCaseIMG["handicap"]                = "img/case.png";
+       listCaseIMG["sport_animaux"]           = "img/case.png";
+       listCaseIMG["convocation"]             = "img/case.png";
+       listCaseIMG["missions"]                = "img/case.png";
+       listCaseIMG["enfants"]                 = "img/case.png";
 
-       listCaseIMG[tab.motif] = "img/caseValid.png";
+       listCaseIMG[tab.motif]                 = "img/caseValid.png";
 
     //*****************QRCODE******************* */
         const imgQR = document.createElement("img");
@@ -214,48 +214,49 @@ function affichage_Attestation(tab)
         <p>À :<span class="colorSpan">${placeBirthID}</span></p>
         <p>Demeurant:<span class="colorSpan">${adresseID}</span></p>
 
-        <p>Certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire<sup>1</sup>:</p>
+        <p>Certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire:</p>
 
         <p  class="case"><img src = ${listCaseIMG["travail"]}>
-        Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation, déplacements professionnels ne pouvant être différés, déplacements pour un concours ou un examen.</p>
+        1.Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation, déplacements professionnels ne pouvant être différés, déplacements pour un concours ou un examen.</p>
 
         <p  class="case">
-        <img src = ${listCaseIMG["achats"]}>
-        Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité dans des établissements dont les activités demeurent autorisées, le retrait de commande et les livraisons à domicile. 
+        <img src = ${listCaseIMG["achats_culturel_cultuel"]}>
+        2.Déplacements pour se rendre dans un établissement culturel autorisé ou un lieu de culte, déplacements pour effectuer des achats de biens, pour des services dont la fourniture est autorisée, pour les retraits de commandes et les livraisons à domicile.
         </p>
 
         <p  class="case">
         <img src = ${listCaseIMG["santé"]}>
-        Consultations, examens et soins ne pouvant être assurés à distance et l’achat de médicaments.
+        3.Consultations, examens et soins ne pouvant être assurés à distance et l’achat de médicaments.
         </p>
 
         <p class="case">
         <img src = ${listCaseIMG["famille"]}>
-        Déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables et précaires ou la garde d'enfants.
+        4.Déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables et précaires ou la garde d'enfants.
         </p>
 
         <p class="case">
         <img src = ${listCaseIMG["handicap"]}>
-        Déplacement des personnes en situation de handicap et leur accompagnant.
+        5.Déplacement des personnes en situation de handicap et leur accompagnant.
         </p>
 
         <p class="case">
         <img src = ${listCaseIMG["sport_animaux"]}>
-        Déplacements brefs, dans la limite d'une heure quotidienne et dans un rayon maximal d'un kilomètre autour du domicile, liés soit à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective et de toute proximité avec d'autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.</p>
+        6.Déplacements en plein air ou vers un lieu de plein air, sans changement du lieu de résidence, dans la limite de 3 heures quotidiennes et dans un rayon maximal de 20 kilomètres autour du domicile, liés soit à l’activité physique ou aux loisirs individuels, à l’exclusion de toute pratique sportive collective et de toute proximité avec d’autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.
+        </p>
 
         <p class="case">
         <img src = ${listCaseIMG["convocation"]}>
-        Convocation judiciaire ou administrative et pour se rendre dans un service public.
+        7.Convocation judiciaire ou administrative et pour se rendre dans un service public.
         </p>
 
         <p class="case">
         <img src = ${listCaseIMG["missions"]}>
-        Participation à des missions d'intérêt général sur demande de l'autorité administrative.
+        8.Participation à des missions d'intérêt général sur demande de l'autorité administrative.
         </p>
 
         <p class="case">
         <img src = ${listCaseIMG["enfants"]}>
-        Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités périscolaires.
+        9.Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités périscolaires.
         </p>
 
         <p>Fait à :<span class="colorSpan">${cityID}</span></p>
