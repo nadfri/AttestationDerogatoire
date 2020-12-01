@@ -82,15 +82,22 @@ for(let attestation of listAttest_Storage)
     //****************Bouton supprimer Attestation********************************** */
     imgBin.onclick = (e) =>
     {
+        divPopUp.classList.add("bigger");
         divPopUp.style.display = "block"; //affiche le pop up de confirmation
         overlay.style.display = "block";
         divIcon.classList.add("hidden");
 
         bt_non.onclick = () => {
-        divPopUp.classList.remove("grow");
-        divPopUp.style.display = "none";
-        overlay.style.display = "none";
-        divIcon.classList.remove("hidden");
+            divPopUp.classList.replace("bigger","smaller");
+
+            setTimeout(()=>
+            {
+                divPopUp.style.display = "none";
+                overlay.style.display = "none";
+                divIcon.classList.remove("hidden");
+                divPopUp.classList.remove("smaller");
+
+            },500);
         };
 
         bt_oui.onclick = () => {
@@ -99,7 +106,7 @@ for(let attestation of listAttest_Storage)
             //filtre le tableau en retirant l'attestation ayant l'id correspondante à la ref de imgBin
             localStorage.setItem("listAttest_Storage", JSON.stringify(listAttest_Storage));
             //document.location.reload();
-            
+
             divPopUp.style.display = "none";
             overlay.style.display = "none";
             divIcon.classList.remove("hidden");
