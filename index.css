@@ -155,16 +155,28 @@ legend{
 }
 
 .bigger{
-    animation: bigger 0.5s;
+    -webkit-animation: bigger 0.5s;
+            animation: bigger 0.5s;
 }
 
 .smaller{
-    animation: smaller 0.5s both;
+    -webkit-animation: smaller 0.5s both;
+            animation: smaller 0.5s both;
+}
+
+@-webkit-keyframes bigger{
+    from{ transform: scale3d(0,0,0);}
+    to  { transform: scale3d(1,1,1);}
 }
 
 @keyframes bigger{
     from{ transform: scale3d(0,0,0);}
     to  { transform: scale3d(1,1,1);}
+}
+
+@-webkit-keyframes smaller{
+    from{ transform: scale3d(1,1,1);}
+    to  { transform: scale3d(0,0,0);}
 }
 
 @keyframes smaller{
